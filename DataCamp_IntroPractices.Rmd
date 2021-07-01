@@ -1,5 +1,5 @@
 ---
-title: "DataCamp_R practices"
+title: "DataCamp course: R practices"
 author: "Mehrnoosh"
 date: "6/30/2021"
 output: html_document
@@ -62,3 +62,7 @@ all_wars_matrix <- rbind (all_wars_matrix, total_revenue_vector)
 # Print out all_wars_matrix
 all_wars_matrix
 ```
+
+## Practice 2: Selection of matrix elements
+```{r starwars}
+
