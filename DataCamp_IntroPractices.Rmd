@@ -9,28 +9,9 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
-
-## Practice 1: Adding row/column to a matrix:
-```{r starwars}
+## Practice 1: Creat a matrix
+```{r starwars1}
 # Creat star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 region <- c("US", "non-US")
@@ -43,7 +24,10 @@ star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
 star_wars_matrix2 <- matrix(c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5),
                             nrow = 3, byrow = TRUE, 
                             dimnames = list(c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith"), region))
+```
 
+## Practice 2: Adding rows/columns to a matrix
+```{r starwars2}
 # Combine both Star Wars trilogies in one matrix (i.e. add rows)
 all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
 
@@ -63,6 +47,6 @@ all_wars_matrix <- rbind (all_wars_matrix, total_revenue_vector)
 all_wars_matrix
 ```
 
-## Practice 2: Selection of matrix elements
-```{r starwars}
+## Practice 3: Selecting matrix elements
+```{r starwars3}
 
