@@ -1,0 +1,64 @@
+---
+title: "DataCamp_R practices"
+author: "Mehrnoosh"
+date: "6/30/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Practice 1: Adding row/column to a matrix:
+```{r starwars}
+# Creat star_wars_matrix
+box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+region <- c("US", "non-US")
+titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
+               
+star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
+                           dimnames = list(titles, region))
+
+# Creat star_wars_matrix2 as a matrix with data for the prequels trilogy
+star_wars_matrix2 <- matrix(c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5),
+                            nrow = 3, byrow = TRUE, 
+                            dimnames = list(c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith"), region))
+
+# Combine both Star Wars trilogies in one matrix (i.e. add rows)
+all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
+
+# The worldwide box office figures
+worldwide_vector <- rowSums(all_wars_matrix)
+
+# Bind the new variable worldwide_vector as a column to star_wars_matrix
+all_wars_matrix <- cbind (all_wars_matrix, worldwide_vector)
+
+# Total revenue for US and non-US
+total_revenue_vector <- colSums(all_wars_matrix)
+
+# Bind total_revenue_vector as a row to all_wars_matrix
+all_wars_matrix <- rbind (all_wars_matrix, total_revenue_vector)
+
+# Print out all_wars_matrix
+all_wars_matrix
+```

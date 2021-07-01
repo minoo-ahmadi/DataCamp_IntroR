@@ -1,2 +1,2 @@
 # DataCamp_IntroR
-Practices from an Intro to R course
+Practices from the Intro to R course on Data Camp.
