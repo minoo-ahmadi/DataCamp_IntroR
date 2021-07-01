@@ -7,13 +7,12 @@ output:
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 
 ## Practice 1: Creat a matrix
-```{r starwars1}
+
+```r
 # Creat star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 region <- c("US", "non-US")
@@ -29,7 +28,8 @@ star_wars_matrix2 <- matrix(c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5),
 ```
 
 ## Practice 2: Adding rows/columns to a matrix
-```{r starwars2}
+
+```r
 # Combine both Star Wars trilogies in one matrix (i.e. add rows)
 all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
 
@@ -49,6 +49,16 @@ all_wars_matrix <- rbind (all_wars_matrix, total_revenue_vector)
 all_wars_matrix
 ```
 
+```
+##                               US non-US worldwide_vector
+## A New Hope               460.998  314.4          775.398
+## The Empire Strikes Back  290.475  247.9          538.375
+## Return of the Jedi       309.306  165.8          475.106
+## The Phantom Menace       474.500  552.5         1027.000
+## Attack of the Clones     310.700  338.7          649.400
+## Revenge of the Sith      380.300  468.5          848.800
+## total_revenue_vector    2226.279 2087.8         4314.079
+```
+
 ## Practice 3: Selecting matrix elements
-```{r starwars3}
 
