@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 ## Practice 1: Creat a matrix
-```{r starwars1}
+```{r}
 # Creat star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 region <- c("US", "non-US")
@@ -29,7 +29,7 @@ star_wars_matrix2 <- matrix(c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5),
 ```
 
 ## Practice 2: Adding rows/columns to a matrix
-```{r starwars2}
+```{r}
 # Combine both Star Wars trilogies in one matrix (i.e. add rows)
 all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
 
@@ -50,5 +50,5 @@ all_wars_matrix
 ```
 
 ## Practice 3: Selecting matrix elements
-```{r starwars3}
+```{r}
 
