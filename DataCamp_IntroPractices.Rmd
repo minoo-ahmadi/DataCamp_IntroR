@@ -68,3 +68,9 @@ non_us_some <- non_us_all [1:2]
 # Average non-US revenue for first two movies
 mean(non_us_some)
 ```
+
+## Practice 4: A little arithmetic with matrices
+```{r}
+
+
+```
