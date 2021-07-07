@@ -71,6 +71,19 @@ mean(non_us_some)
 
 ## Practice 4: A little arithmetic with matrices
 ```{r}
+# Estimate the number of visitors (in millions) for each movie in each geographical area, given a ticket costs $5.
+visitors <- all_wars_matrix[1:6, 1:2]/5
+visitors
 
+# my_matrix1 * my_matrix2 creates a matrix where each element is the product of the corresponding elements in my_matrix1 and my_matrix2. This is not the standard matrix multiplication for which you should use %*% in R.
+tickets_all <- c(5, 5, 6, 6, 7, 7, 4, 4, 4.5, 4.5, 4.9, 4.9)
+titles_all <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi","The Phantom Menace", "Attack of the Clones", "Revenge of the Sith")
+ticket_prices_matrix <- matrix(tickets_all, nrow= 6, byrow = TRUE, dimnames = list(titles_all, region))
+ticket_prices_matrix
+visitors <- all_wars_matrix[1:6, 1:2]/ticket_prices_matrix
+visitors
+
+# Average number of US visitors
+mean(visitors[,1])
 
 ```
