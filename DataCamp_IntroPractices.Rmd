@@ -87,3 +87,20 @@ visitors
 mean(visitors[,1])
 
 ```
+
+
+## Practice 5: Factors
+```{r}
+# Factors are (a list of) categorical variables in R.
+# Use factor() to turn vectors into factors. Type ?factor in console to learn more.
+
+# Sex vector
+sex_vector <- c("Male", "Female", "Female", "Male", "Male")
+
+# Convert sex_vector to a factor
+factor_sex_vector <- factor(sex_vector)
+
+# Print out factor_sex_vector
+factor_sex_vector
+```
+
