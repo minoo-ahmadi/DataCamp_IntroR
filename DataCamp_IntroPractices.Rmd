@@ -116,3 +116,9 @@ temperature_vector <- c("High", "Low", "High","Low", "Medium")
 factor_temperature_vector <- factor(temperature_vector, order = TRUE, levels = c("Low", "Medium", "High"))
 factor_temperature_vector
 ```
+
+## Practice 7: Factor levels
+```{r}
+
+```
+
