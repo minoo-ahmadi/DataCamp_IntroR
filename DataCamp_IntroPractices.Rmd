@@ -123,3 +123,13 @@ factor_temperature_vector
 ```
 
 ## Practice 8:
+```{r}
+
+```
+
+
+
+## DataIncubator Challenge:
+```{r}
+
+```
